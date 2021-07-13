@@ -78,14 +78,14 @@ public class CameraController  extends BaseController {
     public PageData<Camera> getTenantCameras(
             @RequestParam int pageSize,
             @RequestParam int page,
-            @RequestParam(required = false) String sensorType,
+            @RequestParam(required = false) String cameraType,
             @RequestParam(required = false) String sortProperty,
             @RequestParam(required = false) String sortOrder) throws ThingsboardException {
         try {
             TenantId tenantId = getCurrentUser().getTenantId();
-            PageLink pageLink = createPageLink(pageSize, page, sensorType, sortProperty, sortOrder);
-            if (sensorType != null && sensorType.trim().length() > 0) {
-                return checkNotNull(cameraService.findCamerasByTenantIdAndType(tenantId, sensorType, pageLink));
+            PageLink pageLink = createPageLink(pageSize, page, cameraType, sortProperty, sortOrder);
+            if (cameraType != null && cameraType.trim().length() > 0) {
+                return checkNotNull(cameraService.findCamerasByTenantIdAndType(tenantId, cameraType, pageLink));
             } else {
                 return checkNotNull(cameraService.findCamerasByTenantId(tenantId, pageLink));
             }
