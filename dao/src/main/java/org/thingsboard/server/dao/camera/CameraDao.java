@@ -15,23 +15,19 @@
  */
 package org.thingsboard.server.dao.camera;
 
-import com.google.common.util.concurrent.ListenableFuture;
-import org.thingsboard.server.common.data.Device;
 import org.thingsboard.server.common.data.Camera;
 import org.thingsboard.server.common.data.CameraInfo;
-import org.thingsboard.server.common.data.id.CustomerId;
-import org.thingsboard.server.common.data.id.DeviceId;
 import org.thingsboard.server.common.data.id.TenantId;
 import org.thingsboard.server.common.data.page.PageData;
 import org.thingsboard.server.common.data.page.PageLink;
 import org.thingsboard.server.dao.Dao;
 import org.thingsboard.server.dao.TenantEntityDao;
-import org.thingsboard.server.dao.model.sql.CameraEntity;
-
-import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
+/**
+ * The Interface CameraDao.
+ *
+ */
 public interface CameraDao extends Dao<Camera>, TenantEntityDao {
 
 
@@ -74,11 +70,11 @@ public interface CameraDao extends Dao<Camera>, TenantEntityDao {
      * Find cameras by tenantId, type and page link.
      *
      * @param tenantId the tenantId
-     * @param sensorType the type
+     * @param cameraType the type
      * @param pageLink the page link
      * @return the list of camera objects
      */
-    PageData<Camera> findCamerasByTenantIdAndType(UUID tenantId, String sensorType, PageLink pageLink);
+    PageData<Camera> findCamerasByTenantIdAndType(UUID tenantId, String cameraType, PageLink pageLink);
 
     /**
      * Find camera infos by tenantId, type and page link.

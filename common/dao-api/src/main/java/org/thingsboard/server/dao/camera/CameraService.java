@@ -27,13 +27,12 @@ public interface CameraService {
     Camera saveCamera(Camera camera);
 
     PageData<Camera>findCamerasByTenantId(TenantId tenantId, PageLink pageLink);
+
     PageData<Camera> findCamerasByTenantIdAndType(TenantId tenantId, String sensorType, PageLink pageLink);
+
     Camera findCameraById(TenantId tenantId, CameraId cameraId);
+
     void deleteCamera(TenantId tenantId, CameraId cameraId);
-
-
-
-
 
 
 }

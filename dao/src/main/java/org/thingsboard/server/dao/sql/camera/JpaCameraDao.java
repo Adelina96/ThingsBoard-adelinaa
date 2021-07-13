@@ -15,7 +15,7 @@
  */
 package org.thingsboard.server.dao.sql.camera;
 
-import com.google.common.util.concurrent.ListenableFuture;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Component;
@@ -28,12 +28,6 @@ import org.thingsboard.server.dao.DaoUtil;
 import org.thingsboard.server.dao.camera.CameraDao;
 import org.thingsboard.server.dao.model.sql.CameraEntity;
 import org.thingsboard.server.dao.sql.JpaAbstractSearchTextDao;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
 import java.util.UUID;
 
 /**
@@ -65,7 +59,7 @@ public class JpaCameraDao extends JpaAbstractSearchTextDao<CameraEntity, Camera>
 
     @Override
     public CameraInfo findCameraInfoById(TenantId tenantId, UUID cameraId) {
-        System.out.println("----------: ktu jemi te jpaDaoCamera: "+ cameraId);
+        System.out.println(" "+ cameraId);
         //CameraInfo ti = DaoUtil.getData(cameraRepository.findCameraInfoById(cameraId));
         return DaoUtil.getData(cameraRepository.findCameraInfoById(cameraId));
     }

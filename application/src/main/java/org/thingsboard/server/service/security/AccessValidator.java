@@ -168,7 +168,7 @@ public class AccessValidator {
                 validateDevice(currentUser, operation, entityId, callback);
                 return;
 //            case TESTING:
-//                validateTesting(currentUser, operation, entityId, callback);
+//                validateCamera(currentUser, operation, entityId, callback);
 //                return;
             case DEVICE_PROFILE:
                 validateDeviceProfile(currentUser, operation, entityId, callback);
@@ -224,11 +224,11 @@ public class AccessValidator {
     }
 
 
-//    private void validateTesting(final SecurityUser currentUser, Operation operation, EntityId entityId, FutureCallback<ValidationResult> callback) {
+//    private void validateCamera(final SecurityUser currentUser, Operation operation, EntityId entityId, FutureCallback<ValidationResult> callback) {
 //        if (currentUser.isSystemAdmin()) {
 //            callback.onSuccess(ValidationResult.accessDenied(SYSTEM_ADMINISTRATOR_IS_NOT_ALLOWED_TO_PERFORM_THIS_OPERATION));
 //        } else {
-//            ListenableFuture<Testing> deviceFuture = testingService.findTestingByIdAsync(currentUser.getTenantId(), new TestingId(entityId.getId()));
+//            ListenableFuture<Camera> deviceFuture = cameraService.findCameraByIdAsync(currentUser.getTenantId(), new CameraId(entityId.getId()));
 //            Futures.addCallback(deviceFuture, getCallback(callback, device -> {
 //                if (device == null) {
 //                    return ValidationResult.entityNotFound(DEVICE_WITH_REQUESTED_ID_NOT_FOUND);

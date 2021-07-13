@@ -16,14 +16,10 @@
 package org.thingsboard.server.common.data;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.EqualsAndHashCode;
 import lombok.extern.slf4j.Slf4j;
-import org.thingsboard.server.common.data.device.data.DeviceData;
 import org.thingsboard.server.common.data.id.*;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
 
 @EqualsAndHashCode(callSuper = true)
 @Slf4j

@@ -15,11 +15,14 @@
  */
 package org.thingsboard.server.common.data;
 
+import lombok.Data;
 import org.thingsboard.server.common.data.id.CameraId;
 
-
+@Data
 public class CameraInfo extends Camera{
+
     private String customerTitle;
+
     private boolean customerIsPublic;
 
     public CameraInfo() {

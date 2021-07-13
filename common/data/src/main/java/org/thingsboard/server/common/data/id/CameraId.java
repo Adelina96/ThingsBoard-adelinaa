@@ -29,12 +29,12 @@ public class CameraId extends UUIDBased implements EntityId{
     @JsonCreator
     public CameraId(@JsonProperty("id") UUID id) {
         super(id);
-        System.out.println("ktu je te cameraId1 : " + id);
+        System.out.println(" cameraId1 : " + id);
 
     }
 
     public static CameraId fromString(String cameraId) {
-        System.out.println("ktu je te cameraId2 : " + cameraId);
+        System.out.println(" cameraId2 : " + cameraId);
 
         return new CameraId(UUID.fromString(cameraId));
     }
